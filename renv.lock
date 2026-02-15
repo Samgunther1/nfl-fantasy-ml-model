@@ -356,6 +356,32 @@
       "Maintainer": "Michael Chirico <michaelchirico4@gmail.com>",
       "Repository": "CRAN"
     },
+    "cachem": {
+      "Package": "cachem",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Title": "Cache R Objects with Automatic Pruning",
+      "Description": "Key-value stores with automatic pruning. Caches can limit either their total size or the age of the oldest object (or both), automatically pruning objects to maintain the constraints.",
+      "Authors@R": "c( person(\"Winston\", \"Chang\", , \"winston@posit.co\", c(\"aut\", \"cre\")), person(family = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")))",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "ByteCompile": "true",
+      "URL": "https://cachem.r-lib.org/, https://github.com/r-lib/cachem",
+      "Imports": [
+        "rlang",
+        "fastmap (>= 1.2.0)"
+      ],
+      "Suggests": [
+        "testthat"
+      ],
+      "RoxygenNote": "7.2.3",
+      "Config/Needs/routine": "lobstr",
+      "Config/Needs/website": "pkgdown",
+      "NeedsCompilation": "yes",
+      "Author": "Winston Chang [aut, cre], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Winston Chang <winston@posit.co>",
+      "Repository": "RSPM"
+    },
     "cfbfastR": {
       "Package": "cfbfastR",
       "Version": "2.2.1",
@@ -668,6 +694,26 @@
       "NeedsCompilation": "yes",
       "Author": "Hadley Wickham [aut, cre] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Romain François [aut] (ORCID: <https://orcid.org/0000-0002-2444-4226>), Lionel Henry [aut], Kirill Müller [aut] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Davis Vaughan [aut] (ORCID: <https://orcid.org/0000-0003-4777-038X>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "RSPM"
+    },
+    "fastmap": {
+      "Package": "fastmap",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Title": "Fast Data Structures",
+      "Authors@R": "c( person(\"Winston\", \"Chang\", email = \"winston@posit.co\", role = c(\"aut\", \"cre\")), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(given = \"Tessil\", role = \"cph\", comment = \"hopscotch_map library\") )",
+      "Description": "Fast implementation of data structures, including a key-value store, stack, and queue. Environments are commonly used as key-value stores in R, but every time a new key is used, it is added to R's global symbol table, causing a small amount of memory leakage. This can be problematic in cases where many different keys are used. Fastmap avoids this memory leak issue by implementing the map using data structures in C++.",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "Suggests": [
+        "testthat (>= 2.1.1)"
+      ],
+      "URL": "https://r-lib.github.io/fastmap/, https://github.com/r-lib/fastmap",
+      "BugReports": "https://github.com/r-lib/fastmap/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Winston Chang [aut, cre], Posit Software, PBC [cph, fnd], Tessil [cph] (hopscotch_map library)",
+      "Maintainer": "Winston Chang <winston@posit.co>",
       "Repository": "RSPM"
     },
     "generics": {
@@ -1087,6 +1133,36 @@
       "Maintainer": "Lionel Henry <lionel@posit.co>",
       "Repository": "CRAN"
     },
+    "memoise": {
+      "Package": "memoise",
+      "Version": "2.0.1",
+      "Source": "Repository",
+      "Title": "'Memoisation' of Functions",
+      "Authors@R": "c(person(given = \"Hadley\", family = \"Wickham\", role = \"aut\", email = \"hadley@rstudio.com\"), person(given = \"Jim\", family = \"Hester\", role = \"aut\"), person(given = \"Winston\", family = \"Chang\", role = c(\"aut\", \"cre\"), email = \"winston@rstudio.com\"), person(given = \"Kirill\", family = \"Müller\", role = \"aut\", email = \"krlmlr+r@mailbox.org\"), person(given = \"Daniel\", family = \"Cook\", role = \"aut\", email = \"danielecook@gmail.com\"), person(given = \"Mark\", family = \"Edmondson\", role = \"ctb\", email = \"r@sunholo.com\"))",
+      "Description": "Cache the results of a function so that when you call it again with the same arguments it returns the previously computed value.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://memoise.r-lib.org, https://github.com/r-lib/memoise",
+      "BugReports": "https://github.com/r-lib/memoise/issues",
+      "Imports": [
+        "rlang (>= 0.4.10)",
+        "cachem"
+      ],
+      "Suggests": [
+        "digest",
+        "aws.s3",
+        "covr",
+        "googleAuthR",
+        "googleCloudStorageR",
+        "httr",
+        "testthat"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.1.2",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut], Jim Hester [aut], Winston Chang [aut, cre], Kirill Müller [aut], Daniel Cook [aut], Mark Edmondson [ctb]",
+      "Maintainer": "Winston Chang <winston@rstudio.com>",
+      "Repository": "RSPM"
+    },
     "mgcv": {
       "Package": "mgcv",
       "Version": "1.9-3",
@@ -1140,6 +1216,64 @@
       "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Jeffrey Horner [ctb], Beilei Bian [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "RSPM"
+    },
+    "nflreadr": {
+      "Package": "nflreadr",
+      "Version": "1.5.0.9001",
+      "Source": "GitHub",
+      "Title": "Download 'nflverse' Data",
+      "Authors@R": "c( person(\"Tan\", \"Ho\", , \"tan@tanho.ca\", role = c(\"aut\", \"cre\", \"cph\"), comment = c(ORCID = \"0000-0001-8388-5155\")), person(\"Sebastian\", \"Carl\", , \"mrcaseb@gmail.com\", role = \"aut\"), person(\"John\", \"Edwards\", , \"edwards1860@gmail.com\", role = \"ctb\"), person(\"Ben\", \"Baldwin\", , \"bbaldwin206@gmail.com\", role = \"ctb\"), person(\"Thomas\", \"Mock\", role = \"ctb\"), person(\"Lee\", \"Sharpe\", role = \"ctb\"), person(\"Pranav\", \"Rajaram\", , \"pranavrajaram@gmail.com\", role = \"ctb\") )",
+      "Description": "A minimal package for downloading data from 'GitHub' repositories of the 'nflverse' project.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://nflreadr.nflverse.com, https://github.com/nflverse/nflreadr",
+      "BugReports": "https://github.com/nflverse/nflreadr/issues",
+      "Depends": [
+        "R (>= 4.1.0)"
+      ],
+      "Imports": [
+        "cachem (>= 1.0.0)",
+        "cli (>= 3.0.0)",
+        "curl (>= 4.3.0)",
+        "data.table (>= 1.14.0)",
+        "glue (>= 1.4.0)",
+        "lifecycle",
+        "memoise (>= 2.0.0)",
+        "methods",
+        "rappdirs (>= 0.3.0)",
+        "rlang (>= 0.4.10)",
+        "tools",
+        "utils"
+      ],
+      "Suggests": [
+        "arrow (>= 6.0.0)",
+        "covr (>= 3.0.0)",
+        "DT (>= 0.15.0)",
+        "fs (>= 1.5.0)",
+        "gh (>= 1.0.0)",
+        "knitr (>= 1.0.0)",
+        "piggyback (>= 0.1.2)",
+        "progressr (>= 0.8.0)",
+        "qs (>= 0.24.0)",
+        "rmarkdown (>= 2.6.0)",
+        "stringi",
+        "testthat (>= 3.0.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Remotes": "qsbase/qs",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "Roxygen": "list(markdown = TRUE)",
+      "RoxygenNote": "7.3.3",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "nflreadr",
+      "RemoteUsername": "nflverse",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "dca0b7f6c02f18a4d6e644b03f6d8ec8757d2265",
+      "NeedsCompilation": "no",
+      "Author": "Tan Ho [aut, cre, cph] (ORCID: <https://orcid.org/0000-0001-8388-5155>), Sebastian Carl [aut], John Edwards [ctb], Ben Baldwin [ctb], Thomas Mock [ctb], Lee Sharpe [ctb], Pranav Rajaram [ctb]",
+      "Maintainer": "Tan Ho <tan@tanho.ca>"
     },
     "nlme": {
       "Package": "nlme",
